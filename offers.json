@@ -1,0 +1,136 @@
+{
+    "shops": [
+        {
+            "id": 1,
+            "name": "Baker-Bliss",
+            "offers": [
+                {
+                    "title": "Buy 1 Get 1 Free",
+                    "description": "On all croissants!",
+                    "discount": 50,
+                    "expiryDate": "2025-12-31"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Coffee-Corner",
+            "offers": [
+                {
+                    "title": "Flat 20% Off",
+                    "description": "On all cappuccinos.",
+                    "discount": 20,
+                    "expiryDate": "2025-06-30"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Dessert-Heaven",
+            "offers": [
+                {
+                    "title": "Free Brownie with Ice Cream",
+                    "description": "On orders above ₹300.",
+                    "discount": 100,
+                    "expiryDate": "2025-07-15"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Fast-Bites",
+            "offers": [
+                {
+                    "title": "Combo Meal @ ₹199",
+                    "description": "Burger + Fries + Coke",
+                    "discount": 30,
+                    "expiryDate": "2025-08-10"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Haldirams",
+            "offers": [
+                {
+                    "title": "Buy 2 Get 1 Free",
+                    "description": "On all sweets & snacks.",
+                    "discount": 33,
+                    "expiryDate": "2025-09-25"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "KFC",
+            "offers": [
+                {
+                    "title": "Bucket at ₹399",
+                    "description": "Limited-time chicken bucket deal.",
+                    "discount": 25,
+                    "expiryDate": "2025-05-20"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Pizza Hut",
+            "offers": [
+                {
+                    "title": "50% Off on Large Pizzas",
+                    "description": "Available only on weekends.",
+                    "discount": 50,
+                    "expiryDate": "2025-11-01"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "name": "Royal-Indian",
+            "offers": [
+                {
+                    "title": "Thali at ₹299",
+                    "description": "Full meal with dessert included.",
+                    "discount": 20,
+                    "expiryDate": "2025-12-01"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "name": "Street-Eats",
+            "offers": [
+                {
+                    "title": "Chaat Combo at ₹99",
+                    "description": "Pani Puri + Bhel Puri + Dahi Puri.",
+                    "discount": 15,
+                    "expiryDate": "2025-10-10"
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "name": "Sushi-Spot",
+            "offers": [
+                {
+                    "title": "Buy 1 Sushi Roll, Get 1 Free",
+                    "description": "Valid only on Tuesdays.",
+                    "discount": 50,
+                    "expiryDate": "2025-09-15"
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "name": "Wow Momos",
+            "offers": [
+                {
+                    "title": "Free Dip with Every Momos Order",
+                    "description": "Extra spicy dip free on all orders.",
+                    "discount": 100,
+                    "expiryDate": "2025-12-15"
+                }
+            ]
+        }
+    ]
+}

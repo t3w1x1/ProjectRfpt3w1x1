@@ -1,0 +1,157 @@
+/* General Styles */
+body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f8f8f8, #eaeaea);
+}
+
+/* Header Styles */
+/* Header */
+header {
+    background: #001f3f;
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+    position: relative;
+    top: 0;
+    z-index: 1000;
+}
+
+header img {
+    max-height: 150px;
+    width: auto;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    font-size: 1em;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #D4AF37;
+}
+
+/* Brand Section */
+.brand-section {
+    text-align: center;
+    padding: 60px 10%;
+    background: linear-gradient(to right, #001f3f, #003366); /* Deep Blue Gradient */
+    color: white;
+}
+
+.brand-banner img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2));
+}
+
+.brand-info {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.brand-info h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #FFD700; /* Gold Highlight */
+}
+
+.brand-info p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Visit Website Button */
+.visit-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #FFD700; /* Gold */
+    color: #001f3f;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.visit-btn:hover {
+    background: white;
+    color: #001f3f;
+}
+
+/* Products Section */
+.products-section {
+    text-align: center;
+    padding: 60px 10%;
+    background-color: white;
+}
+
+.products-section h2 {
+    font-size: 32px;
+    color: #001f3f;
+    margin-bottom: 30px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background: white;
+    width: 270px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    color: #001f3f;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #001f3f;
+    color: white;
+    text-align: center;
+    padding: 25px 10%;
+    margin-top: 50px;
+    font-size: 14px;
+}

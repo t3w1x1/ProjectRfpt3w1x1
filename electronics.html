@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Nexus Mall</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="https://assets.onecompiler.app/435cpwh28/437d8q7gr/N.png" alt="Nova Nexus Logo" class="logo">
+        
+         
+
+        <nav>
+            <a href="shopping.html">Shopping</a>
+            <a href="dining.html">Food & Drink</a>
+            <a href="entertainment.html">Entertainment</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About Us</a>
+        </nav>
+    </header>
+<body style="margin: 0; font-family: 'Segoe UI', sans-serif; background: linear-gradient(to right, #f0f2f5, #e4e9f0);">
+  <h1 style="text-align:center; margin: 30px 0; font-size: 2rem; color: #333;">Electronics Stores</h1>
+
+  <div id="store-container" style="
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    padding: 20px 5%;
+    max-width: 1400px;
+    margin: auto;
+  "></div>
+
+  <script>
+    const stores = [
+      {
+        name: "Croma",
+        desc: "Multi-brand electronics and appliances store.",
+        link: "https://www.croma.com",
+        color: "#0074cc",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8seeKmrPem02ZPoMognef4vVrx54S8FmF5g&s"
+      },
+      {
+        name: "Reliance Digital",
+        desc: "Consumer electronics and smart devices.",
+        link: "https://www.reliancedigital.in",
+        color: "#d32f2f",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZrVZKtbO7u31esfVwi4Mq1ab0qqJjWHmi-_cwNGybvGX6fqwAEoRl8LG7dTwnBcF7dvE&usqp=CAU"
+      },
+      {
+        name: "Apple iPlanet",
+        desc: "Official Apple reseller for premium devices.",
+        link: "https://www.iplanetstore.in",
+        color: "#333",
+        img: "https://iplanet.one/cdn/shop/files/12_535x_be82d755-c0f7-4b00-85b8-ec1198333c2f_1500x.webp?v=1716355626"
+      },
+      {
+        name: "Samsung Smart Plaza",
+        desc: "Samsung-exclusive store with phones, TVs & more.",
+        link: "https://www.samsung.com/in",
+        color: "#1428a0",
+        img: "https://img.global.news.samsung.com/in/wp-content/uploads/2022/09/saket.jpg"
+      },
+      {
+        name: "Sony Center",
+        desc: "Audio, video, cameras, and PlayStation consoles.",
+        link: "https://www.sony.co.in",
+        color: "#000",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrmyQbDwlrPDA5UKNg6GMfEMDQ3Txgp1YsJg&s"
+      }
+    ];
+
+    const container = document.getElementById("store-container");
+
+    container.innerHTML = stores.map(store => `
+      <a href="${store.link}" target="_blank" style="text-decoration: none;">
+        <div style="
+          background: white;
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        " onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 16px 32px rgba(0,0,0,0.15)';"
+           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';">
+
+          <img src="${store.img}" alt="${store.name}" style="
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+          ">
+
+          <div style="padding: 16px; text-align: center;">
+            <h2 style="margin: 10px 0 6px; color: ${store.color}; font-size: 20px;">${store.name}</h2>
+            <p style="font-size: 14px; color: #555;">${store.desc}</p>
+          </div>
+        </div>
+      </a>
+    `).join('');
+  </script>
+</body>
+
+<footer>
+        <div class="footer-column">
+            <h3>Newsletter</h3>
+            <p>Don’t miss out on the latest trends – explore more to get the latest updates today!</p>
+        </div>
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="aboutus.html">About</a>
+            <a href="services.html">Guest Services</a>
+            <a href="#shopping">Leasing</a>
+            <a href="Community.html">Community</a>
+            <a href="Privacy Policy.html">Privacy Policy</a>
+        </div>
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <p>Nova Nexus Mall</p>
+            <p>123 Main Street</p>
+            <p>Your City, State, ZIP</p>
+            <p>(123) 456-7890</p>
+        </div>
+        <div class="footer-column">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwjr0ta4KV6dCZNPlrGLvt5S6YV52T-DPV2w&s" alt="Twitter">
+                <img src="https://cdn-icons-png.flaticon.com/512/1409/1409946.png" alt="Instagram">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174883.png" alt="YouTube">
+            </div>
+        </div>
+    </footer>
+
+    
+<script src="script.js"></script>
+</body>
+</html>

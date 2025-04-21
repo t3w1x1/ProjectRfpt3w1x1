@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stall Dashboard - Update Offers</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #f4f4f4; margin: 0; }
+        .dashboard-container {
+            width: 400px; padding: 40px; background: white; margin: 50px auto;
+            border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, textarea, button {
+            width: 100%; padding: 10px; margin-top: 10px;
+            border: 1px solid #ccc; border-radius: 5px;
+        }
+        button { background: #28a745; color: white; border: none; cursor: pointer; }
+        button:hover { background: #218838; }
+        .logout-btn { background: #dc3545; margin-top: 20px; }
+        .logout-btn:hover { background: #c82333; }
+        .offer-container {
+            margin-top: 20px; padding: 15px; background: #e9ecef; border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <h2>Welcome, <span id="stallUser"></span>!</h2>
+        <p>Manage your stall's offers here.</p>
+
+        <!-- Offer Input Fields -->
+        <input type="text" id="offerTitle" placeholder="Enter Offer Title">
+        <textarea id="offerDetails" rows="3" placeholder="Enter Offer Details"></textarea>
+        <button onclick="updateOffer()">Update Offer</button>
+
+        <!-- Display Existing Offers -->
+        <div class="offer-container">
+            <h3>Current Offer</h3>
+            <p id="currentOfferTitle" style="font-weight: bold;"></p>
+            <p id="currentOfferDetails"></p>
+        </div>
+
+        <button class="logout-btn" onclick="logout()">signout</button>
+    </div>
+
+    <script>
+        let loggedInUser = localStorage.getItem("loggedInUser");
+
+        if (!loggedInUser) {
+            window.location.href = "signin.html"; // Redirect if not logged in
+        } else {
+            document.getElementById("stallUser").innerText = loggedInUser;
+        }
+
+        // Load stored offer
+        function loadOffer() {
+            let stallOffers = JSON.parse(localStorage.getItem("stallOffers")) || {};
+            if (stallOffers[loggedInUser]) {
+                document.getElementById("currentOfferTitle").innerText = stallOffers[loggedInUser].title || "No Offer Available";
+                document.getElementById("currentOfferDetails").innerText = stallOffers[loggedInUser].details || "";
+            }
+        }
+
+        // Update Offer Function
+        function updateOffer() {
+            let title = document.getElementById("offerTitle").value;
+            let details = document.getElementById("offerDetails").value;
+
+            if (!title || !details) {
+                alert("Please fill in both fields!");
+                return;
+            }
+
+            let stallOffers = JSON.parse(localStorage.getItem("stallOffers")) || {};
+            stallOffers[loggedInUser] = { title: title, details: details };
+
+            localStorage.setItem("stallOffers", JSON.stringify(stallOffers));
+            loadOffer(); // Refresh offer display
+
+            alert("Offer updated successfully!");
+        }
+
+        // Logout Function
+        function logout() {
+            localStorage.removeItem("loggedInUser");
+            window.location.href = "signin.html";
+        }
+
+        // Load existing offer when the page loads
+        loadOffer();
+    </script>
+
+</body>
+</html>

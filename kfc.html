@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC - Nova Nexus Mall</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #e60012;
+            color: white;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Playfair Display', serif;
+
+        }
+
+        header img {
+            max-height: 60px;
+        }
+
+        nav a {
+            color: white;
+            margin-right: 20px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #ffb81c;
+        }
+        .hero {
+    background: url('https://images.unsplash.com/photo-1513639776629-7b61b0ac49cb?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8a2ZjfGVufDB8fDB8fHww') no-repeat center center/cover;
+    height: 60vh; /* Reduced from 100vh */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+        .hero h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .content {
+            padding: 50px 10%;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #e60012;
+            margin-bottom: 15px;
+            background: linear-gradient(to right, #ffb81c, #ff6f61);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 200px;
+            padding: 20px;
+            background: white;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #e60012;
+        }
+
+        .material-icons {
+            font-size: 40px;
+            color: #e60012;
+        }
+
+        footer {
+            background-color: #e60012;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+        .card {
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://assets.onecompiler.app/435cpwh28/437d8q7gr/N.png" alt="Nova Nexus Mall Logo">
+        <nav>  <a href="Home.html">Home</a>
+            
+            <a href="Shopping.html">Shopping</a>
+            <a href="dining.html">Food & Drink</a>
+            <a href="entertainment.html">Entertainment</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About Us</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>KFC</h1>
+    </section>
+
+    <section class="content">
+        <div class="section">
+            <h2>Menu</h2>
+            <p><strong>Original Recipe Chicken:</strong> KFC’s iconic fried chicken with a secret blend of 11 herbs and spices.</p>
+            <p><strong>Hot Wings:</strong> Spicy, crispy wings served with a tangy sauce.</p>
+            <p><strong>Zinger Burger:</strong> A crispy chicken fillet burger with lettuce and mayonnaise.</p>
+            <p><strong>Popcorn Chicken:</strong> Bite-sized pieces of crispy, seasoned chicken served with dipping sauce.</p>
+            <p><strong>Chicken Bucket:</strong> A family-sized bucket with a variety of KFC’s fried chicken pieces.</p>
+             
+        </div>
+
+ 
+
+        <div class="section">
+            
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-icon">
+                        <span class="material-icons">call</span>
+                    </div>
+                    <p>Contact:73297 27847</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <span class="material-icons">stairs</span>
+                    </div>
+                    <p>Second Floor near lift</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <span class="material-icons">schedule</span>
+                    </div>
+                    <p>Timings: 10 AM - 11 PM</p>
+                    <p>on sundays:11 AM - 9 PM</p>
+                </div>
+                 <div><!-- New Offer Card -->
+                <div class="card" style="background-color: white;" id="specialOfferCard">
+                    <div class="card-icon">
+                        <span class="material-icons">sell</span>
+                    </div>
+                     <h3> Special Offer</h3>
+                    <p id="offerTitle" style="font-weight: bold;"></p>
+                        <p id="offerDetails"></p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Nova Nexus Mall. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const offers = JSON.parse(localStorage.getItem("stallOffers")) || {};
+    const offerCard = document.getElementById("specialOfferCard");
+    const titleEl = document.getElementById("offerTitle");
+    const detailsEl = document.getElementById("offerDetails");
+
+    const kfcEmail = "kfc@gmail.com"; // Explicitly using the KFC email
+    const offer = offers[kfcEmail];
+
+    if (offer) {
+        titleEl.textContent = offer.title || "No Title";
+        detailsEl.textContent = offer.details || "No Details Provided";
+    } else {
+        titleEl.textContent = "No Special Offer";
+        detailsEl.textContent = "Please check back later!";
+    }
+});
+
+      </script>
+      
+    
+      
+      
+    </body>
+</html>

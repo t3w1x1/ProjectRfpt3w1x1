@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 30px 10%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-column {
+            flex: 1;
+            margin: 10px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.1em;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 10px;
+        }
+
+        .footer-column p, .footer-column a {
+            font-size: 0.9em;
+            font-family: 'Lora', serif;
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Lora', serif; background-color: #f4f4f4; color: #333; }
+        header { background-color: #001f3f; color: white; padding: 20px 10%; display: flex; justify-content: space-between; align-items: center; }
+        header img { max-height: 60px; }
+        nav { display: flex; gap: 20px; }
+        nav a { color: white; text-decoration: none; font-family: 'Playfair Display', serif; font-weight: 400; }
+        nav a:hover { text-decoration: underline; }
+        .hero { text-align: center; padding: 50px 10%; }
+        .hero h1 { font-size: 2.5em; font-family: 'Playfair Display', serif; color: #001f3f; }
+        .container { max-width: 1200px; margin: 50px auto; text-align: center; }
+        .search-bar { margin-bottom: 20px; }
+        .search-bar input { width: 80%; padding: 10px; border: 2px solid #001f3f; border-radius: 5px; font-size: 1em; }
+        .categories { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; }
+        .category { background: white; padding: 20px; border-radius: 15px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: transform 0.3s; cursor: pointer; text-decoration: none; }
+        .category:hover { transform: translateY(-10px); background: #f0f0f0; }
+        .category img { width: 120px; height: 120px; border-radius: 50%; margin-bottom: 15px; }
+        .category p { font-size: 1.1em; font-weight: bold; }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Nexus - Shopping</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div>
+            <img src="https://assets.onecompiler.app/435cpwh28/437d8q7gr/N.png" alt="Nova Nexus Logo">
+            <h1>Nova Nexus</h1>
+        </div>
+        <nav>
+            <a href="Home.html">Home</a>
+            <a href="shopping.html">Shopping</a>
+            <a href="dining.html">Food & Drink</a>
+            <a href="entertainment.html">Entertainment</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About Us</a>
+        </nav>
+    </header>
+    <div class="hero">
+        <h1>Shopping Categories</h1>
+        <p>Explore a variety of categories available at Nova Nexus Mall.</p>
+        <p>here are some clothing Suggestions for you</p>
+        
+    </div>
+    <div class="container">
+        <div class="categories" id="categoryList">
+            <a href="womensfashion.html" class="category" data-name="Women's Fashion">
+                <img src="https://www.hyderabad.lulumall.in/wp-content/uploads/2023/08/womens-fashion.png" alt="Women's Fashion">
+                <p>Women's Fashion</p>
+            </a>
+            <a href="Mensfashion.html" class="category" data-name="Men's Fashion">
+                <img src="https://www.hyderabad.lulumall.in/wp-content/uploads/2023/08/mens-fashion.png" alt="Men's Fashion">
+                <p>Men's Fashion</p>
+            </a>
+            <a href="kids-wear.html" class="category" data-name="Kids Wear">
+                <img src="https://www.hyderabad.lulumall.in/wp-content/uploads/2023/08/kids-wear.png" alt="Kids Wear">
+                <p>Kids Wear</p>
+            </a>
+            <a href="jewellery.html" class="category" data-name="Jewellery">
+                <img src="https://www.hyderabad.lulumall.in/wp-content/uploads/2023/08/jewellery.png" alt="Jewellery">
+                <p>Jewellery</p>
+            </a>
+            <a href="electronics.html" class="category" data-name="Electronics">
+                <img src="https://www.hyderabad.lulumall.in/wp-content/uploads/2023/08/mobile-electronics.png" alt="Electronics">
+                <p>Electronics</p>
+            </a>
+            <a href="footwear.html" class="category" data-name="Footwear">
+                <img src="https://www.hyderabad.lulumall.in/wp-content/uploads/2023/08/foot-wear-bags.png" alt="Footwear">
+                <p>Footwear</p>
+            </a>
+            <a href="beauty-wellness.html" class="category" data-name="Beauty & Wellness">
+                <img src="https://www.hyderabad.lulumall.in/wp-content/uploads/2023/08/beayty-and-wellness.png" alt="Beauty & Wellness">
+                <p>Beauty & Wellness</p>
+            </a>
+            <a href="toys.html" class="category" data-name="Toys">
+                <img src="https://www.hyderabad.lulumall.in/wp-content/uploads/2023/08/toys-1.png" alt="Toys">
+                <p>Toys</p>
+            </a>
+        </div>
+    </div>
+   
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-column">
+            <h3>Newsletter</h3>
+            <p>Don’t miss out on the latest trends – sign up for our newsletter today!</p>
+            <button>SIGN UP</button>
+        </div>
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="#about">About</a>
+            <a href="#services">Guest Services</a>
+            <a href="#shopping">Leasing</a>
+            <a href="#">Community</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <p>Nova Nexus Mall</p>
+            <p>123 Main Street</p>
+            <p>Hyderabad, Telangana, 501510</p>
+            <p>(123) 456-7890</p>
+        </div>
+        <div class="footer-column">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwjr0ta4KV6dCZNPlrGLvt5S6YV52T-DPV2w&s" alt="Twitter">
+                <img src="https://cdn-icons-png.flaticon.com/512/1409/1409946.png" alt="Instagram">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174883.png" alt="YouTube">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

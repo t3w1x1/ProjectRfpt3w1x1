@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Nexus Mall</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="https://assets.onecompiler.app/435cpwh28/437d8q7gr/N.png" alt="Nova Nexus Logo" class="logo">
+        
+        <!-- 🔍 Search Bar (Centered in Header) -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for a store..." onkeyup="searchStores()" autocomplete="off">
+            <div class="suggestions-box" id="suggestionsBox"></div>
+        </div>
+
+        <nav>
+            <a href="shopping.html">Shopping</a>
+            <a href="dining.html">Food & Drink</a>
+            <a href="entertainment.html">Entertainment</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About Us</a>
+        </nav>
+    </header>
+   <style>
+     
+
+        /* Store Section - Flex Layout */
+        .container {
+            display: flex;
+            padding: 20px 10%;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .store-image img {
+            max-width: 800px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .store-details {
+            flex: 1;
+        }
+
+        .store-details h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .store-details p {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .store-details a {
+            color: #001f3f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .store-details a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    
+    <!-- Store Content Section -->
+    <div class="container">
+        <div class="store-image">
+            <img src="https://dynl.mktgcdn.com/p/hsvF-lszqrCUH3uXAyeZokWcTNpRavyTUrAikmVW4Us/5000x2812.jpg" alt="Store Image">
+        </div>
+        <div class="store-details">
+            <h1>A | X Armani Exchange</h1>
+            <p><strong>Hours:</strong></p>
+            <p>Tue-Sat: 10 AM - 9 PM</p>
+            <p>Sun: 11 AM - 7 PM</p>
+            <p><strong>Location:</strong> 141 South Avenue</p>
+            <p><strong>Contact:</strong> <a href="tel:9528549400">952.854.9400</a></p>
+            <p><a href="#" class="map-link">See Map</a></p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-column">
+            <h3>Newsletter</h3>
+            <p>Don’t miss out on the latest trends – sign up for our newsletter today!</p>
+            <button>SIGN UP</button>
+        </div>
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="#about">About</a>
+            <a href="#services">Guest Services</a>
+            <a href="#shopping">Leasing</a>
+            <a href="#">Community</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <p>Nova Nexus Mall</p>
+            <p>123 Main Street</p>
+            <p>Your City, State, ZIP</p>
+            <p>(123) 456-7890</p>
+        </div>
+        <div class="footer-column">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwjr0ta4KV6dCZNPlrGLvt5S6YV52T-DPV2w&s" alt="Twitter">
+                <img src="https://cdn-icons-png.flaticon.com/512/1409/1409946.png" alt="Instagram">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174883.png" alt="YouTube">
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+

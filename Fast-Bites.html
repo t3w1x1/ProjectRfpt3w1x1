@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Bites - Nova Nexus Mall</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #001f3f;
+            color: white;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            max-height: 60px;
+        }
+
+        nav a {
+            color: white;
+            margin-right: 20px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #f4a261;
+        }
+
+        .hero {
+            background: url('https://www.foreverwallpapers.com/wp-content/uploads/2018/12/Fast-Food.jpg') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .content {
+            padding: 50px 10%;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            background: linear-gradient(to right, #f4a261, #e76f51);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .section p {
+            color: #333;
+        }
+
+        .menu-item {
+            margin-bottom: 10px;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 200px;
+            padding: 20px;
+            background: white;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #001f3f;
+        }
+
+        .material-icons {
+            font-size: 40px;
+            color: #001f3f;
+        }
+
+        footer {
+            background-color: #001f3f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://assets.onecompiler.app/435cpwh28/437d8q7gr/N.png" alt="Nova Nexus Mall Logo">
+        <nav>  <a href="Home.html">Home</a>
+            
+            <a href="Shopping.html">Shopping</a>
+            <a href="dining.html">Food & Drink</a>
+            <a href="entertainment.html">Entertainment</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About Us</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Fast Bites</h1>
+    </section>
+
+    <section class="content">
+        <!-- Menu Section -->
+        <div class="section">
+            <h2>Menu</h2>
+            <p class="menu-item"><strong>Cheesy Fries:</strong> Crispy fries topped with melted cheese and spices.</p>
+            <p class="menu-item"><strong>Chicken Wings:</strong> Spicy wings served with a tangy dipping sauce.</p>
+            <p class="menu-item"><strong>Hot Dogs:</strong> Grilled sausages in a toasted bun with your choice of toppings.</p>
+            <p class="menu-item"><strong>Burgers:</strong> Juicy beef patties with fresh lettuce, tomato, and pickles.</p>
+            <p class="menu-item"><strong>Milkshakes:</strong> Thick and creamy shakes in various flavors.</p>
+        </div>
+
+        <!-- Information Cards Section -->
+        <div class="section">
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-icon">
+                        <span class="material-icons">call</span>
+                    </div>
+                    <p>Contact: 87654 32109</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <span class="material-icons">stairs</span>
+                    </div>
+                    <p>Location: Third Floor, Near Game Zone</p>
+                </div>
+                <div><!-- New Offer Card -->
+                    <div class="card" style="background-color: white;" id="specialOfferCard">
+                        <div class="card-icon">
+                            <span class="material-icons">sell</span>
+                        </div>
+                         <h3>  Special Offer</h3>
+                        <p id="offerTitle" style="font-weight: bold;"></p>
+                            <p id="offerDetails"></p>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Nova Nexus Mall. All rights reserved.</p>
+    </footer>
+    <script>
+     document.addEventListener("DOMContentLoaded", function () {
+    const offers = JSON.parse(localStorage.getItem("stallOffers")) || {};
+    const offerCard = document.getElementById("specialOfferCard");
+    const titleEl = document.getElementById("offerTitle");
+    const detailsEl = document.getElementById("offerDetails");
+
+    const fastEmail = " fastbites@gmail.com"; // Email for Dessert Heaven
+    const offer = offers[fastEmail];
+
+    if (offer) {
+        titleEl.textContent = offer.title || "No Title";
+        detailsEl.textContent = offer.details || "No Details Provided";
+    } else {
+        titleEl.textContent = "No Special Offer";
+        detailsEl.textContent = "Please check back later!";
+    }
+});
+
+
+
+      </script>
+</body>
+</html>
+

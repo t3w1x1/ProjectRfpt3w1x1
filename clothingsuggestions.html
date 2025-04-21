@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Nexus Mall - Clothing Suggestions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Header & Footer Styling from Home.html */
+    body {
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background: #f0f0f0;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      background:#001f3f;
+      padding: 1rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #eff0e9ff;
+      font-weight: 600;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .search-container {
+      position: relative;
+      flex: 1;
+      max-width: 300px;
+      margin: 1rem auto;
+    }
+
+    .search-container input {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 2rem 1rem;
+    }
+
+    .footer-column {
+      flex: 1;
+      max-width: 220px;
+      margin: 1rem;
+    }
+
+    .footer-column h3 {
+      border-bottom: 1px solid #fff;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-column a {
+      display: block;
+      color: #ccc;
+      text-decoration: none;
+      margin: 0.3rem 0;
+    }
+
+    .social-icons img {
+      width: 24px;
+      margin-right: 8px;
+    }
+
+    /* Clothing Suggestion Page Styling */
+    h2 {
+      margin: 2rem 0 1rem;
+      color: #333;
+    }
+
+    .controls {
+      margin-bottom: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    select, input {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 0 1rem 2rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 200px;
+      padding: 1rem;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 0.8rem;
+    }
+
+    .card h4 {
+      margin: 0.3rem 0;
+      font-size: 1.1rem;
+      color: #222;
+    }
+
+    .card p {
+      color: #555;
+      margin-bottom: 0.8rem;
+    }
+
+    .card button {
+      padding: 0.4rem 0.8rem;
+      background: #ff416c;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .card button:hover {
+      background: #e63956;
+    }
+
+    .dark-mode {
+      background: #121212;
+      color: #f0f0f0;
+    }
+
+    .dark-mode .card {
+      background: #1e1e1e;
+    }
+
+    .dark-mode select,
+    .dark-mode input,
+    .dark-mode button {
+      background-color: #333;
+      color: white;
+      border: 1px solid #555;
+    }
+
+    .dark-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 8px;
+      background: #444;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        width: 90%;
+      }
+
+      .controls {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav, .footer-column {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="dark-toggle" onclick="toggleDarkMode()">🌓 Toggle Dark Mode</button>
+
+  <!-- Header from Home.html -->
+  <header>
+    <img src="https://assets.onecompiler.app/435cpwh28/437d8q7gr/N.png" alt="Nova Nexus Logo" class="logo">
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search for a store..." autocomplete="off">
+      <div class="suggestions-box" id="suggestionsBox"></div>
+    </div>
+    <nav>
+      <a href="shopping.html">Shopping</a>
+      <a href="dining.html">Food & Drink</a>
+      <a href="entertainment.html">Entertainment</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About Us</a>
+    </nav>
+  </header>
+
+  <!-- Clothing Suggestion Feature Content -->
+  <h2>👕 Most Affordable Clothing Suggestions</h2>
+
+  <div class="controls">
+    <input type="text" id="searchBar" placeholder="Search clothing...">
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="top">Tops</option>
+      <option value="bottom">Bottoms</option>
+      <option value="footwear">Footwear</option>
+    </select>
+    <select id="sortPrice">
+      <option value="default">Sort by Price</option>
+      <option value="asc">Price: Low to High</option>
+      <option value="desc">Price: High to Low</option>
+    </select>
+    <button onclick="showWishlist()">  View Wishlist</button>
+  </div>
+
+  <div id="clothing-container" class="grid"></div>
+
+  <!-- Footer from Home.html -->
+  <footer>
+    <div class="footer-column">
+      <h3>Newsletter</h3>
+      <p>Don’t miss out on the latest trends – explore more to get the latest updates today!</p>
+    </div>
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <a href="aboutus.html">About</a>
+      <a href="services.html">Guest Services</a>
+      <a href="#shopping">Leasing</a>
+      <a href="Community.html">Community</a>
+      <a href="Privacy Policy.html">Privacy Policy</a>
+    </div>
+    <div class="footer-column">
+      <h3>Contact</h3>
+      <p>Nova Nexus Mall</p>
+      <p>123 Main Street</p>
+      <p>Your City, State, ZIP</p>
+      <p>(123) 456-7890</p>
+    </div>
+    <div class="footer-column">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwjr0ta4KV6dCZNPlrGLvt5S6YV52T-DPV2w&s" alt="Twitter">
+        <img src="https://cdn-icons-png.flaticon.com/512/1409/1409946.png" alt="Instagram">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174883.png" alt="YouTube">
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const clothingItems = [
+      { name: "Plain T-Shirt", price: 299, category: "top", img: "https://source.unsplash.com/200x150/?tshirt" },
+      { name: "Slim Fit Jeans", price: 899, category: "bottom", img: "https://source.unsplash.com/200x150/?jeans" },
+      { name: "Sneakers", price: 999, category: "footwear", img: "https://source.unsplash.com/200x150/?sneakers" },
+      { name: "Joggers", price: 699, category: "bottom", img: "https://source.unsplash.com/200x150/?joggers" },
+      { name: "Canvas Shoes", price: 749, category: "footwear", img: "https://source.unsplash.com/200x150/?canvas-shoes" },
+      { name: "Polo Shirt", price: 399, category: "top", img: "https://source.unsplash.com/200x150/?polo" }
+    ];
+
+    const container = document.getElementById("clothing-container");
+    const filter = document.getElementById("categoryFilter");
+    const sortPrice = document.getElementById("sortPrice");
+    const searchBar = document.getElementById("searchBar");
+
+    function getFilteredItems() {
+      let filtered = [...clothingItems];
+      const category = filter.value;
+      const query = searchBar.value.toLowerCase();
+
+      if (category !== "all") filtered = filtered.filter(item => item.category === category);
+      if (query) filtered = filtered.filter(item => item.name.toLowerCase().includes(query));
+
+      const sort = sortPrice.value;
+      if (sort === "asc") filtered.sort((a, b) => a.price - b.price);
+      if (sort === "desc") filtered.sort((a, b) => b.price - a.price);
+
+      return filtered;
+    }
+
+    function renderClothing(filtered = clothingItems) {
+      container.innerHTML = "";
+      const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+      filtered.forEach(item => {
+        const inWishlist = wishlist.includes(item.name);
+        container.innerHTML += `
+          <div class="card">
+            <img src="${item.img}" alt="${item.name}" />
+            <h4>${item.name}</h4>
+            <p>₹${item.price}</p>
+            <button onclick="toggleWishlist('${item.name}')">
+              ${inWishlist ? "❌ Remove from Wishlist" : "  Add to Wishlist"}
+            </button>
+          </div>
+        `;
+      });
+    }
+
+    function updateView() {
+      renderClothing(getFilteredItems());
+    }
+
+    filter.addEventListener("change", updateView);
+    sortPrice.addEventListener("change", updateView);
+    searchBar.addEventListener("input", updateView);
+
+    function toggleWishlist(itemName) {
+      let list = JSON.parse(localStorage.getItem("wishlist")) || [];
+      if (list.includes(itemName)) {
+        list = list.filter(name => name !== itemName);
+        alert(`❌ "${itemName}" removed from wishlist.`);
+      } else {
+        list.push(itemName);
+        alert(`✅ "${itemName}" added to wishlist.`);
+      }
+      localStorage.setItem("wishlist", JSON.stringify(list));
+      updateView();
+    }
+
+    function showWishlist() {
+      const list = JSON.parse(localStorage.getItem("wishlist")) || [];
+      const filtered = clothingItems.filter(item => list.includes(item.name));
+      renderClothing(filtered);
+    }
+
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+
+    renderClothing();
+  </script>
+</body>
+</html>

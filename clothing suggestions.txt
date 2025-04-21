@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Affordable Clothing Suggestions</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f0f0;
+      padding: 2rem;
+      margin: 0;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    select {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 200px;
+      padding: 1rem;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 0.8rem;
+    }
+
+    .card h4 {
+      margin: 0.3rem 0;
+      font-size: 1.1rem;
+      color: #222;
+    }
+
+    .card p {
+      color: #555;
+      margin-bottom: 0.8rem;
+    }
+
+    .card button {
+      padding: 0.4rem 0.8rem;
+      background: #ff416c;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .card button:hover {
+      background: #e63956;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>👕 Most Affordable Clothing Suggestions</h2>
+
+  <select id="categoryFilter">
+    <option value="all">All Categories</option>
+    <option value="top">Tops</option>
+    <option value="bottom">Bottoms</option>
+    <option value="footwear">Footwear</option>
+    <option value="western">Western Wear</option>
+    <option value="ethnic">Ethnic Wear</option>
+    <option value="casual">Casuals</option>
+    <option value="formal">Formals</option>
+  </select>
+
+  <div id="clothing-container" class="grid"></div>
+
+  <script>
+    const clothingItems = [
+      { name: "Plain T-Shirt", price: 299, category: "top", img: "https://source.unsplash.com/200x150/?tshirt" },
+      { name: "Slim Fit Jeans", price: 899, category: "bottom", img: "https://source.unsplash.com/200x150/?jeans" },
+      { name: "Sneakers", price: 999, category: "footwear", img: "https://source.unsplash.com/200x150/?sneakers" },
+      { name: "Joggers", price: 699, category: "bottom", img: "https://source.unsplash.com/200x150/?joggers" },
+      { name: "Canvas Shoes", price: 749, category: "footwear", img: "https://source.unsplash.com/200x150/?canvas-shoes" },
+      { name: "Polo Shirt", price: 399, category: "top", img: "https://source.unsplash.com/200x150/?polo" },
+      { name: "Denim Jacket", price: 1299, category: "western", img: "https://source.unsplash.com/200x150/?denim-jacket" },
+      { name: "Kurtas", price: 799, category: "ethnic", img: "https://source.unsplash.com/200x150/?kurta" },
+      { name: "Casual Shirt", price: 499, category: "casual", img: "https://source.unsplash.com/200x150/?casual-shirt" },
+      { name: "Blazer", price: 1599, category: "formal", img: "https://source.unsplash.com/200x150/?blazer" },
+      { name: "Chinos", price: 899, category: "casual", img: "https://source.unsplash.com/200x150/?chinos" },
+      { name: "Saree", price: 1499, category: "ethnic", img: "https://source.unsplash.com/200x150/?saree" },
+      { name: "Formal Shoes", price: 1299, category: "footwear", img: "https://source.unsplash.com/200x150/?formal-shoes" },
+      { name: "Jacket", price: 1099, category: "western", img: "https://source.unsplash.com/200x150/?jacket" }
+    ];
+
+    const container = document.getElementById("clothing-container");
+    const filter = document.getElementById("categoryFilter");
+
+    function renderClothing(filtered = clothingItems) {
+      container.innerHTML = "";
+      filtered.forEach(item => {
+        container.innerHTML += `
+          <div class="card">
+            <img src="${item.img}" alt="${item.name}" />
+            <h4>${item.name}</h4>
+            <p>₹${item.price}</p>
+            <button onclick="addToWishlist('${item.name}')">❤️ Add to Wishlist</button>
+          </div>
+        `;
+      });
+    }
+
+    filter.addEventListener("change", () => {
+      const value = filter.value;
+      if (value === "all") renderClothing();
+      else renderClothing(clothingItems.filter(item => item.category === value));
+    });
+
+    function addToWishlist(itemName) {
+      let list = JSON.parse(localStorage.getItem("wishlist")) || [];
+      if (!list.includes(itemName)) list.push(itemName);
+      localStorage.setItem("wishlist", JSON.stringify(list));
+      alert(`✅ "${itemName}" added to wishlist!`);
+    }
+
+    renderClothing();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Clothing Brands</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .brand-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .brand-card {
+            background: white;
+            width: 220px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s;
+            text-decoration: none; /* Remove underline */
+        }
+        .brand-card:hover {
+            transform: scale(1.05);
+        }
+        .brand-card img {
+            width: 100%;
+            height: 120px;
+            object-fit: contain;
+            padding: 10px;
+        }
+        .brand-card h3 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #007bff;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #001f3f;
+            color: white;
+            padding: 30px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            max-height: 100px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .hero h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #001f3f;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 30px 10%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-column {
+            flex: 1;
+            margin: 10px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .footer-column p, .footer-column a {
+            font-size: 0.9em;
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+   <!-- Header Section -->
+    <header>
+        <img src="https://assets.onecompiler.app/435cpwh28/437d8q7gr/N.png" alt="Nova Nexus Logo">
+        <nav>  <a href="Home.html">Home</a>
+            
+            <a href="Shopping.html">Shopping</a>
+            <a href="dining.html">Food & Drink</a>
+            <a href="entertainment.html">Entertainment</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About Us</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section (Updated & Centered) -->
+    <section class="hero">
+        <h1>Welcome to Nova Nexus Mall</h1>
+        <p>Your ultimate destination for shopping, dining, and entertainment.</p>
+    </section>
+
+    <h2>Men's Fashion</h2>
+    <div class="brand-container" id="brandSection">
+        <!-- Brands will be inserted here using JavaScript -->
+    </div>
+
+    <script>
+        const mensFashionBrands = [
+            { name: "Nike", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg", link: "nike.html" },
+            { name: "Adidas", logo: "https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg", link: "adidas.html" },
+            { name: "Puma", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNOhHZ-0c3De3DFuwuosHkDnJRDwhDb-tLdw&s", link: "puma.html" },
+            { name: "Levi's", logo: "https://fabrikbrands.com/wp-content/uploads/Levis-Logo-History-1b.png", link: "levis.html" },
+            { name: "Raymond", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj0jcOkoNMFzh59pku8-pLmf8MkhKCQLVfiQ&s", link: "raymond.html" },
+            { name: "Arrow", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0l5a3c9PACi8pfu4cr5P0h0XWO0l-7IiOvg&s", link: "arrow.html" },
+            { name: "Van Heusen", logo: "https://m.media-amazon.com/images/S/stores-image-uploads-eu-prod/0/AmazonStores/A21TJRUUN4KGV/16681e92cb2bc41351a9112a58bf8918.w4801.h2701.png", link: "vanheusen.html" },
+            { name: "U.S. Polo Assn.", logo: "https://static.vecteezy.com/system/resources/previews/024/455/681/non_2x/us-polo-assn-brand-logo-symbol-with-name-white-clothes-design-icon-abstract-illustration-with-blue-background-free-vector.jpg", link: "uspoa.html" },
+            { name: "Jack & Jones", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs7YD1AsWsoda_bhA_ie3Qbi6ciUaFkwJwFA&s", link: "jackjones.html" },
+            { name: "Allen Solly", logo: "https://crystalpng.com/wp-content/uploads/2023/03/allen-solly-logo.png", link: "allensolly.html" }
+        ];
+
+        const brandSection = document.getElementById("brandSection");
+
+        mensFashionBrands.forEach(brand => {
+            let card = document.createElement("a");
+            card.classList.add("brand-card");
+            card.href = brand.link; // Link to the separate page for each brand
+            card.innerHTML = `
+                <img src="${brand.logo}" alt="${brand.name}">
+                <h3>${brand.name}</h3>
+            `;
+            brandSection.appendChild(card);
+        });
+    </script>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-column">
+            <h3>Newsletter</h3>
+            <p>Don’t miss out on the latest trends – sign up for our newsletter today!</p>
+            <button>SIGN UP</button>
+        </div>
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="#about">About</a>
+            <a href="#services">Guest Services</a>
+            <a href="#shopping">Leasing</a>
+            <a href="#">Community</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <p>Nova Nexus Mall</p>
+            <p>123 Main Street</p>
+            <p>Your City, State, ZIP</p>
+            <p>(123) 456-7890</p>
+        </div>
+        <div class="footer-column">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5
