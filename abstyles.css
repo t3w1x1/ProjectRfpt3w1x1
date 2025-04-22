@@ -1,0 +1,308 @@
+/* General Reset and Defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Lora', serif;
+    background-color: #f8f8f8;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: #001f3f;
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+    position: relative;
+    top: 0;
+    z-index: 1000;
+}
+
+header img {
+    max-height: 150px;
+    width: auto;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    font-size: 1em;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #D4AF37;
+}
+
+/* Search Bar */
+.search-container {
+    flex-grow: 1;
+    max-width: 400px;
+    margin: 0 20px;
+    position: relative;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Suggestions Box */
+.suggestions-box {
+    position: absolute;
+    width: 100%;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.suggestion-item {
+    padding: 10px;
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.suggestion-item:hover {
+    background: #f0f0f0;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #ff6600;
+}
+
+.no-result {
+    padding: 10px;
+    color: #888;
+    font-style: italic;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 5%;
+    background: url('https://source.unsplash.com/1600x900/?luxury-shopping-mall') no-repeat center center/cover;
+    position: relative;
+    color: white;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero h1, .hero p {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 2.2em;
+    margin-bottom: 8px;
+}
+
+.hero p {
+    font-size: 1.1em;
+}
+
+/* Store Section */
+.container {
+    display: flex;
+    padding: 40px 10%;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.store-image, .store-details {
+    flex: 1 1 50%;
+    max-width: 50%;
+}
+
+.store-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.store-details h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.store-details p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.store-details a {
+    color: #001f3f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.store-details a:hover {
+    text-decoration: underline;
+}
+
+/* Coordinators Section */
+.coordinators-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1rem;
+    background-color: #f9f9f9;
+    text-align: center;
+    width: 100%;
+}
+
+.coordinators-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #003366;
+}
+
+.coordinators-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.coordinators-grid div {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+}
+
+.coordinators-grid h4 {
+    font-size: 1.2rem;
+    color: #003366;
+    margin-bottom: 0.5rem;
+}
+
+.coordinators-grid p {
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background: #001f3f;
+    color: white;
+    padding: 30px 10%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-column h3 {
+    font-size: 1.1em;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+    color: #D4AF37;
+}
+
+.footer-column p, .footer-column a {
+    font-size: 0.9em;
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+    filter: brightness(1);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .store-image, .store-details {
+        max-width: 100%;
+        flex: 1 1 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .coordinators-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+} the image should be background image 
