@@ -163,24 +163,27 @@
 
   <script>
     const beautyBrands = [
-      { name: "Nykaa", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw2SPs8vpnvO31ZJzPI4AcPjQcZkDgEzboU72E8jbAdhI_sRqIROEt5TNCwmeIGBLP7aQ&usqp=CAU" },
-      { name: "Forest Essentials", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKoTl6tlCeQBJGTpDxzoTkTV_-T86QkpQCHQ&s" },
-      { name: "Mamaearth", logo: "https://static.thearcweb.com/images/PROD/PROD-164cca1b-d99a-4b21-86ae-1296b4397fec.jpg" },
-      { name: "Plum", logo: "https://i.pinimg.com/736x/3d/c2/77/3dc277d9b7eae42cb4fbef1f05909e61.jpg" },
+      { name: "Nykaa", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw2SPs8vpnvO31ZJzPI4AcPjQcZkDgEzboU72E8jbAdhI_sRqIROEt5TNCwmeIGBLP7aQ&usqp=CAU",link:"nykaa.html" },
+      { name: "Forest Essentials", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKoTl6tlCeQBJGTpDxzoTkTV_-T86QkpQCHQ&s",link:"forestessential.html" },
+      { name: "Mamaearth", logo: "https://static.thearcweb.com/images/PROD/PROD-164cca1b-d99a-4b21-86ae-1296b4397fec.jpg",link:"mamaearth.html" },
+      { name: "Plum", logo: "https://i.pinimg.com/736x/3d/c2/77/3dc277d9b7eae42cb4fbef1f05909e61.jpg",link:"plum.html" },
    
     ];
 
     const brandSection = document.getElementById("brandSection");
-
     beautyBrands.forEach(brand => {
-      let card = document.createElement("div");
-      card.classList.add("brand-card");
-      card.innerHTML = `
-        <img src="${brand.logo}" alt="${brand.name}">
-        <h3>${brand.name}</h3>
-      `;
-      brandSection.appendChild(card);
-    });
+  let card = document.createElement("div");
+  card.classList.add("brand-card");
+  card.innerHTML = `
+    <a href="${brand.link}" style="text-decoration: none; color: inherit;">
+      <img src="${brand.logo}" alt="${brand.name}">
+      <h3>${brand.name}</h3>
+    </a>
+  `;
+  brandSection.appendChild(card);
+});
+
+    
   </script>
 
   <!-- Footer Section -->
@@ -217,3 +220,4 @@
   </footer>
 </body>
 </html>
+
