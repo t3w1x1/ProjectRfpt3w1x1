@@ -1,293 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nova Nexus Mall</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@300;400;700&display=swap" rel="stylesheet">
-
-  <style>
-    /* General Styles */
-    body {
-      font-family: 'Lora', serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* Header Styles */
-    header {
-      background-color: #001f3f;
-      color: white;
-      padding: 20px 10%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header img {
-      max-height: 80px;
-    }
-
-    .search-container {
-      width: 100%;
-      margin-top: 10px;
-      display: flex;
-      justify-content: center;
-    }
-
-    .search-container input {
-      width: 90%;
-      max-width: 400px;
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 6px;
-      border: none;
-    }
-
-    nav {
-      display: flex;
-      gap: 20px;
-      margin-top: 10px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-family: 'Playfair Display', serif;
-      font-weight: 400;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .hero {
-      background-color: #f0f8ff;
-      text-align: center;
-      padding: 50px 20px;
-    }
-
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5em;
-      margin: 0;
-    }
-
-    .hero p {
-      font-size: 1.1em;
-      margin-top: 10px;
-    }
-
-    /* Store Section */
-    .container {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      max-width: 1200px;
-      margin: 50px auto;
-      padding: 20px;
-    }
-
-    .store-image {
-      flex: 1;
-    }
-
-    .store-image img {
-      width: 100%;
-      max-width: 500px;
-      border-radius: 10px;
-    }
-
-    .store-details {
-      flex: 1;
-    }
-
-    .store-details h1 {
-      font-size: 32px;
-      color: #001f3f;
-    }
-
-    .store-details p {
-      font-size: 18px;
-      margin: 10px 0;
-    }
-
-    .store-details a {
-      color: #0073e6;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .store-details a:hover {
-      text-decoration: underline;
-    }
-
-    .image-section {
-      padding: 20px;
-    }
-
-    .image-full {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin-bottom: 20px;
-    }
-
-    .image-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-    }
-
-    .image-row img {
-      width: 100%;
-      max-width: 250px;
-      height: auto;
-      border-radius: 8px;
-      transition: transform 0.3s;
-    }
-
-    .image-row img:hover {
-      transform: scale(1.05);
-    }
-
-    /* Footer Styles */
-    footer {
-      background-color: #333;
-      color: white;
-      padding: 30px 10%;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    .footer-column {
-      flex: 1;
-      margin: 10px;
-    }
-
-    .footer-column h3 {
-      font-size: 1.1em;
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 10px;
-    }
-
-    .footer-column p,
-    .footer-column a {
-      font-size: 0.9em;
-      font-family: 'Lora', serif;
-      color: #ccc;
-      text-decoration: none;
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    .footer-column a:hover {
-      color: white;
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 10px;
-    }
-
-    .social-icons img {
-      width: 30px;
-      height: 30px;
-    }
-
-    /* Responsive Fixes */
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      nav {
-        justify-content: center;
-      }
-
-      .image-row {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .footer-column {
-        flex: 1 1 100%;
-        text-align: center;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Nexus Mall</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <img src="https://assets.onecompiler.app/435cpwh28/437d8q7gr/N.png" alt="Nova Nexus Logo" class="logo" />
-    <div class="search-container">
-      <input type="text" id="searchInput" placeholder="Search for a store..." autocomplete="off" />
-    </div>
-    <nav>
-      <a href="Shopping.html">Shopping</a>
-      <a href="dining.html">Food & Drink</a>
-      <a href="entertainment.html">Entertainment</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About Us</a>
-    </nav>
-  </header>
+    <header>
+        <img src="https://assets.onecompiler.app/435cpwh28/437d8q7gr/N.png" alt="Nova Nexus Logo" class="logo">
+        
+        <!-- 🔍 Search Bar (Centered in Header) -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for a store..." onkeyup="searchStores()" autocomplete="off">
+            <div class="suggestions-box" id="suggestionsBox"></div>
+        </div>
 
-  <section class="hero">
-    <h1>Welcome to Nova Nexus Mall</h1>
-    <p>Your ultimate destination for shopping, dining, and entertainment.</p>
-  </section>
+        <nav>
+            <a href="Shopping.html">Shopping</a>
+            <a href="dining.html">Food & Drink</a>
+            <a href="entertainment.html">Entertainment</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About Us</a>
+        </nav>
+    </header>
 
-  <section class="image-section">
-    <img class="image-full" src="https://www.parealtors.org/wp-content/uploads/2024/06/GettyImages-1004801546.jpg" alt="Shopping Image 1" />
-    <div class="image-row">
-      <a href="Shopping.html">
-        <img src="https://as1.ftcdn.net/v2/jpg/02/04/13/94/1000_F_204139479_0TYdUjaXfkRQEpiYf33qPMJUdlRvwNIm.jpg" alt="Shopping Image 2" />
-      </a>
-      <a href="dining.html">
-        <img src="https://media.istockphoto.com/id/1307512007/photo/two-asian-chinese-female-choosing-clothes-clothing-store.jpg?s=612x612&w=0&k=20&c=G33F2xhiyK-TtiJ7hDvwy2q3vk_ZPXb2S5Sl5mSp2QY=" alt="Shopping Image 3" />
-      </a>
-    </div>
-  </section>
+    <section class="hero">
+        <h1>Welcome to Nova Nexus Mall</h1>
+        <p>Your ultimate destination for shopping, dining, and entertainment.</p>
+    </section>
+    <section class="image-section">
+        <img class="image-full" src="https://www.parealtors.org/wp-content/uploads/2024/06/GettyImages-1004801546.jpg" alt="Shopping Image 1">
+        <div class="image-row">
+            <a href="shopping.html">
+                <img src="https://as1.ftcdn.net/v2/jpg/02/04/13/94/1000_F_204139479_0TYdUjaXfkRQEpiYf33qPMJUdlRvwNIm.jpg" alt="Shopping Image 2">
+            </a>
+            <a href="dining.html">
+                <img src="https://media.istockphoto.com/id/1307512007/photo/two-asian-chinese-female-choosing-clothes-clothing-store.jpg?s=612x612&w=0&k=20&c=G33F2xhiyK-TtiJ7hDvwy2q3vk_ZPXb2S5Sl5mSp2QY=" alt="Shopping Image 3">
+            </a>
+        </div>
+        
+    </section>
 
-  <footer>
-    <div class="footer-column">
-      <h3>Newsletter</h3>
-      <p>Don’t miss out on the latest trends – explore more to get the latest updates today!</p>
-    </div>
-    <div class="footer-column">
-      <h3>Quick Links</h3>
-      <a href="aboutus.html">About</a>
-      <a href="services.html">Guest Services</a>
-      <a href="#shopping">Leasing</a>
-      <a href="Community.html">Community</a>
-      <a href="Privacy Policy.html">Privacy Policy</a>
-    </div>
-    <div class="footer-column">
-      <h3>Contact</h3>
-      <p>Nova Nexus Mall</p>
-      <p>123 Main Street</p>
-      <p>Your City, State, ZIP</p>
-      <p>(123) 456-7890</p>
-    </div>
-    <div class="footer-column">
-      <h3>Follow Us</h3>
-      <div class="social-icons">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwjr0ta4KV6dCZNPlrGLvt5S6YV52T-DPV2w&s" alt="Twitter" />
-        <img src="https://cdn-icons-png.flaticon.com/512/1409/1409946.png" alt="Instagram" />
-        <img src="https://cdn-icons-png.flaticon.com/512/174/174883.png" alt="YouTube" />
-      </div>
-    </div>
-  </footer>
 
-  <!-- Optional script file -->
-  <!-- <script src="script.js"></script> -->
+    <footer>
+        <div class="footer-column">
+            <h3>Newsletter</h3>
+            <p>Don’t miss out on the latest trends – explore more to get the latest updates today!</p>
+        </div>
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="aboutus.html">About</a>
+            <a href="services.html">Guest Services</a>
+            <a href="#shopping">Leasing</a>
+            <a href="Community.html">Community</a>
+            <a href="Privacy Policy.html">Privacy Policy</a>
+        </div>
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <p>Nova Nexus Mall</p>
+            <p>123 Main Street</p>
+            <p>Your City, State, ZIP</p>
+            <p>(123) 456-7890</p>
+        </div>
+        <div class="footer-column">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwjr0ta4KV6dCZNPlrGLvt5S6YV52T-DPV2w&s" alt="Twitter">
+                <img src="https://cdn-icons-png.flaticon.com/512/1409/1409946.png" alt="Instagram">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174883.png" alt="YouTube">
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
