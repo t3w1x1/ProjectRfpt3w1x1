@@ -77,3 +77,128 @@
     <script src="script.js"></script>
 </body>
 </html>
+/* General Styles */
+body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+    background-color: #001f3f;
+    color: white;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    max-height: 80px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Store Section */
+.container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.store-image {
+    flex: 1;
+}
+
+.store-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.store-details {
+    flex: 1;
+}
+
+.store-details h1 {
+    font-size: 32px;
+    color: #001f3f;
+}
+
+.store-details p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.store-details a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.store-details a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 10%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-column h3 {
+    font-size: 1.1em;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+
+.footer-column p, .footer-column a {
+    font-size: 0.9em;
+    font-family: 'Lora', serif;
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
